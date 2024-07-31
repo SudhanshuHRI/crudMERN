@@ -1,87 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
   box-sizing: border-box;
-  font-family: "Poppins", "sans-serif";
+  font-family: Rubik;
 }
-html {
-  font-size: 62.5%;
+
+.LoginPageContainer {
+  height: 100vh;
+  overflow: auto;
 }
-body {
-  background-image: url('https://img.freepik.com/free-vector/young-woman-wearing-coat-hat-scarf-riding-bicycle-park-fall-foliage-from-wind-is-blowing-autumn-season-cartoon-character-vector-illustration_1150-52716.jpg?t=st=1722097189~exp=1722100789~hmac=b90c8a9ab48e8b7c25b03af18dfb962c070767af0a1cc5d9dcf6145d4364b9cb&w=740') ;
-  background-position: center;
+
+.LoginPageInnerContainer {
+  display: flex;
+  min-height: 100%;
+}
+
+.LoginPageInnerContainer .ImageContianer {
+  width: 65%;
+  background-color: #e1dfec;
+  min-height: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginPageInnerContainer .ImageContianer .GroupImage {
+  width: 60%;
+  display: block;
+  border-radius: 50%;
+}
+
+.LoginPageInnerContainer .LoginFormContainer {
+  flex-grow: 2;
+  background-color: white;
+  min-height: 100%;
+  padding: 5%;
+  background: url(https://i.imgur.com/BKyjjFa.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .LogoContainer .logo {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .header {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .subHeader {
+  color: #9aa4ad;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer {
+  color: #3f3f45;
+  margin: 20px 0px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .label {
+  display: flex;
   width: 100%;
-  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 7px;
+  margin-bottom: 10px;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .label .labelIcon {
+  width: 20px;
+  margin-right: 10px;
+  display: block;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .inputContainer .input {
+  display: block;
+  width: calc(100% - 20px);
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid #d6d7db;
+  border-radius: 5px;
+  margin-top: 5px;
+  outline: 0px !important;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .OptionsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.LoginFormContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.login-form {
-  background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(15px);
-  border: 1px solid #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(255, 255, 255, 0.1);
-  padding: 4rem;
-  width: 40rem;
+
+.LoginFormInnerContainer {
+  max-width: 500px;
 }
-.login-form h2 {
-  color: #8f2c24;
-  font-size: 3.8rem;
-  font-weight: 600;
-  margin-bottom: 2.5rem;
-  text-align: center;
+
+.LoginPageInnerContainer .LoginFormContainer .checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  display: block;
+  border: 1px solid #d6d7db;
 }
-.input-box input {
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  color: #8f2c24;
-  font-size: 1.6rem;
-  margin-bottom: 3rem;
-  padding: 1.5rem 2rem;
-  outline: none;
+
+.LoginPageInnerContainer .LoginFormContainer .checkboxContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .checkboxContainer label {
+  display: block;
+  padding: 0px 5px;
+  color: #9aa4ad;
+}
+
+.LoginPageInnerContainer .LoginFormContainer .ForgotPasswordLink {
+  color: #e7483b;
+  text-decoration: none;
+}
+
+.LoginFormContainer .LoginFormInnerContainer .LoginButton {
+  margin-top: 30px;
+  display: block;
   width: 100%;
-}
-.login-form .input-box ::placeholder {
-  color: #8f2c24;
-}
-.input-box .login-btn {
-  background:#8f2c24;
-  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #254595;
+  border: 0px;
+  outline: 0px;
   cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 1px;
 }
-.input-box .login-btn:hover {
-  background: #b7544c;
+
+.LoginFormContainer .LoginFormInnerContainer .LoginButton:active {
+  background-color: #254595;
 }
-/* Media Queries  */
-@media (width <= 475px) {
-    html {
-      font-size: 56.25%;
-    }
-    .input-box input {
-        font-size: 1.8rem;
-    }
+
+
+@media only screen and (max-width: 1200px) {
+  .LoginPageInnerContainer .ImageContianer {
+      width: 50%;
+  }
 }
-@media (width <= 380px) {
-    html {
-      font-size: 50%;
-    }
-    .input-box input {
-        font-size: 2rem;
-    }
+
+@media only screen and (max-width: 800px) {
+  .LoginPageInnerContainer .ImageContianer {
+      display: none;
+  }
+
+  .LoginFormContainer {
+      justify-content: center;
+  }
 }
-@media (width <= 360px) {
-    html {
-      font-size: 43.75%;
-    }
-    .input-box input {
-        font-size: 2rem;
-    }
+
+.LoginPageContainer::-webkit-scrollbar {
+  width: 5px;
 }
+
+.LoginPageContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.LoginPageContainer::-webkit-scrollbar-thumb {
+  background: #2e1f7a;
+}
+
+.LoginPageContainer::-webkit-scrollbar-thumb:hover {
+  background: #4520ff;
+}
+
