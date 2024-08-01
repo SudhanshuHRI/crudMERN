@@ -179,4 +179,14 @@
 .LoginPageContainer::-webkit-scrollbar-thumb:hover {
   background: #4520ff;
 }
-
+.tableContainer{
+  display:flex;
+  justify-content: center;
+}
+.tableContainer>div{
+  width: 100%;
+}
+.buttonS{
+  margin-top: 30px;
+  margin-bottom:30px;
+}
