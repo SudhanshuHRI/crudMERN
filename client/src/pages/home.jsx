@@ -39,8 +39,13 @@ const Home = () => {
     <div className="container tableContainer mt-4">
 
       <div className="row">
-        <h1>Welcome to User Database</h1>
+       
+       
         <div className="col-12">
+        <div className='addButton'>
+        <h1>Welcome to User Database</h1>
+        <button className='btn btn-success'>Add User </button>
+        </div>
           <Table responsive bordered className='text-center'>
             <thead>
               <tr>
@@ -62,7 +67,7 @@ const Home = () => {
                 <td>@mdo</td>
                 <td>1</td>
                 <td>Mark</td>
-                <td><img src='dummyUser.jpg' height={100} width={100}/></td>
+                <td><img src='dummyUser.jpg' height={100} width={100} alt='dummyUser'/></td>
                 <td className='d-flex justify-content-evenly'>
                   
                   <button className='btn btn-warning buttonS'><IoCreate /></button>
